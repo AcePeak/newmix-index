@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta charset="utf-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+  <meta name="Resource-type" content="Document" /> 
+  <title>新合文化传播集团</title> 
+  <meta name="author" content="新合文化传播集团" /> 
+  <meta name="keywords" content="新合文化传播集团 网络广告代理公司 互联网广告代理公司 互动整合营销 数字营销 数字媒介代理 汽车广告 移动代理 数字娱乐营销 数字创意 互动策略 内容营销" /> 
+  <meta name="description" content="新合传播致力于在数字领域为合作伙伴提供最佳的整合解决方案，包括媒介计划与购买、数字策略服务、社交媒体营销、移动营销、创意设计、网站建设等多个领域。新合的营销精英正翘首启足，只为实现我们对合作伙伴的承诺和愿景。" /> 
+  <link rel="shortcut icon" type="image/x-icon" href="res/ico.ico" /> 
+  <link rel="stylesheet" type="text/css" href="css/jquery.fullPagev2.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/newmix.css" /> 
+  <script type="text/javascript">
+if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+    if(window.location.href.indexOf("?mobile")<0){
+        try{
+            if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+                window.location.href="wap.html";
+				
+            }else if(/iPad/i.test(navigator.userAgent)){
+                window.location.href="ipadindex.html";
+				
+            }else{
+                window.location.href="index.html";
+				
+            }
+        }catch(e){}
+    }
+}
+</script> 
+  <script type="text/javascript" src="js/jquery.min.js"></script> 
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.fullPagev2.js"></script> 
+  <!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]--> 
+  <script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['', '#3297d3','','','',''],
+				anchors: ['首页', '新合概述', '解决方案', '合作伙伴', '新合案例', '新合动态'],
+				menu: '#menu',
+				scrollingSpeed: 1000,
+				slidesNavigation: true,
+				navigation: true,
+				continuousVerticalLoop: true,
+				onLeave: function(index, nextIndex, direction){
+					if(index == 1){
+						$("#header").removeClass("invisible");
+					}
+					else if(nextIndex == 1)
+					{
+						$("#header").addClass("invisible");
+					}
+				},
+			});
+		});
+    </script> 
+  <script type="text/javascript">
+	//创建和初始化地图函数：
+	function initMap(lng,lat,adds) {
+		createMap(lng,lat);//创建地图
+		setMapEvent();//设置地图事件
+		addMapControl();//向地图添加控件
+		addMarker(adds);//向地图中添加marker
+	}
+	//创建地图函数：
+	function createMap(lng,lat) {
+		var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+		var point = new BMap.Point(lng,lat);//定义一个中心点坐标
+		map.centerAndZoom(point, 20);//设定地图的中心点和坐标并将地图显示在地图容器中
+		window.map = map;//将map变量存储在全局
+	}
+
+	//地图事件设置函数：
+	function setMapEvent() {
+		map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+		map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+		map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+		map.enableKeyboard();//启用键盘上下左右键移动地图
+	}
+
+	//地图控件添加函数：
+	function addMapControl() {
+		//向地图中添加缩放控件
+		var ctrl_nav = new BMap.NavigationControl({
+			anchor : BMAP_ANCHOR_TOP_LEFT,
+			type : BMAP_NAVIGATION_CONTROL_LARGE
+		});
+		map.addControl(ctrl_nav);
+		//向地图中添加缩略图控件
+		var ctrl_ove = new BMap.OverviewMapControl({
+			anchor : BMAP_ANCHOR_BOTTOM_RIGHT,
+			isOpen : 1
+		});
+		map.addControl(ctrl_ove);
+		//向地图中添加比例尺控件
+		var ctrl_sca = new BMap.ScaleControl({
+			anchor : BMAP_ANCHOR_BOTTOM_LEFT
+		});
+		map.addControl(ctrl_sca);
+	}
+
+	//标注点数组
+	var markerArr = [ {
+		title : "皇城国际中心A座16层",
+		content : "北京市东城区安定门外大街136号皇城国际中心A座16层",
+		point : "116.415189|39.961901",
+		isOpen : 1,
+		icon : {
+			w : 23,
+			h : 25,
+			l : 46,
+			t : 21,
+			x : 9,
+			lb : 12
+		}
+	},{
+		title : "东华时尚创意园",
+		content : "上海市长宁区杨宅路199号东华时尚创意园5楼E座",
+		point : "121.424109|31.209549",
+		isOpen : 1,
+		icon : {
+			w : 23,
+			h : 25,
+			l : 46,
+			t : 21,
+			x : 9,
+			lb : 12
+		}
+	},{
+		title : "新城海滨花园",
+		content : "广州市天河区珠江新城海月路407号新城海滨花园1栋2楼",
+		point : "113.347767|23.119542",
+		isOpen : 1,
+		icon : {
+			w : 23,
+			h : 25,
+			l : 46,
+			t : 21,
+			x : 9,
+			lb : 12
+		}
+	}];
+	//创建marker
+	function addMarker(adds) {
+	//	for ( var i = 0; i < markerArr.length; i++) {
+			var json = markerArr[adds];
+			var p0 = json.point.split("|")[0];
+			var p1 = json.point.split("|")[1];
+			var point = new BMap.Point(p0, p1);
+			var iconImg = createIcon(json.icon);
+			var marker = new BMap.Marker(point, {
+				icon : iconImg
+			});
+			var iw = createInfoWindow(adds);
+			var label = new BMap.Label(json.title, {
+				"offset" : new BMap.Size(json.icon.lb - json.icon.x + 10, -20)
+			});
+			marker.setLabel(label);
+			map.addOverlay(marker);
+			label.setStyle({
+				borderColor : "#808080",
+				color : "#333",
+				cursor : "pointer"
+			});
+
+			(function() {
+				var index = adds;
+				var _iw = createInfoWindow(adds);
+				var _marker = marker;
+				_marker.addEventListener("click", function() {
+					this.openInfoWindow(_iw);
+				});
+				_iw.addEventListener("open", function() {
+					_marker.getLabel().hide();
+				})
+				_iw.addEventListener("close", function() {
+					_marker.getLabel().show();
+				})
+				label.addEventListener("click", function() {
+					_marker.openInfoWindow(_iw);
+				})
+				if (!!json.isOpen) {
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+	//	}
+	}
+	//创建InfoWindow
+	function createInfoWindow(i) {
+		var json = markerArr[i];
+		var iw = new BMap.InfoWindow(
+				"<b class='iw_poi_title' title='" + json.title + "'>"
+						+ json.title + "</b><div class='iw_poi_content'>"
+						+ json.content + "</div>");
+		return iw;
+	}
+	//创建一个Icon
+	function createIcon(json) {
+		var icon = new BMap.Icon(
+				"http://app.baidu.com/map/images/us_mk_icon.png",
+				new BMap.Size(json.w, json.h), {
+					imageOffset : new BMap.Size(-json.l, -json.t),
+					infoWindowOffset : new BMap.Size(json.lb + 5, 1),
+					offset : new BMap.Size(json.x, json.h)
+				})
+		return icon;
+	}
+
+	//弹出隐藏层
+	function ShowDiv(show_div, bg_div,id) {
+		document.getElementById(show_div).style.display = 'block';
+		document.getElementById(bg_div).style.display = 'block';
+		
+		var bgdiv = document.getElementById(bg_div);
+		bgdiv.style.width = document.body.scrollWidth;
+		window.onmousewheel = function(){
+			window.location="http://www.new-mix.com.cn/#page2";       
+			}
+		// bgdiv.style.height = $(document).height();
+		  var app="";	
+			$.post(app+"/Index/zhaopin",{isclass:id}, function(data){
+			//	alert(data['num']);
+			    $("#top_title").html('');
+			    $("#top_title").html(data['top']);
+				$(".bb1").html("");
+				var num=data['num'];
+				if(num==0){
+					$('#showli1').hide();
+					$('#showli2').hide();
+					$('#showli3').hide();
+					$('#showli4').hide();
+				}else if(num==1){
+					$('#showli1').show();
+					$('#tt1').html(data['ct'][0]['title']);
+					$('#tt2').html(data['ct'][0]['bewrite']);
+					$('#tt3').html(data['ct'][0]['bewrite1']); 
+					$('#showli2').hide();
+					$('#showli3').hide();
+					$('#showli4').hide();
+					
+				}else if(num==2){
+					$('#showli1').show();
+					$('#showli2').show();
+					$('#tt1').html(data['ct'][0]['title']);
+					$('#tt2').html(data['ct'][0]['bewrite']);
+					$('#tt3').html(data['ct'][0]['bewrite1']); 
+					$('#tt4').html(data['ct'][1]['title']);
+					$('#tt5').html(data['ct'][1]['bewrite']);
+					$('#tt6').html(data['ct'][1]['bewrite1']);
+					$('#showli3').hide();
+					$('#showli4').hide();
+					
+				}else if(num==3){
+					$('#showli1').show();
+					$('#showli2').show();
+					$('#showli3').show();
+					$('#tt1').html(data['ct'][0]['title']);
+					$('#tt2').html(data['ct'][0]['bewrite']);
+					$('#tt3').html(data['ct'][0]['bewrite1']); 
+					$('#tt4').html(data['ct'][1]['title']);
+					$('#tt5').html(data['ct'][1]['bewrite']);
+					$('#tt6').html(data['ct'][1]['bewrite1']);
+					$('#tt7').html(data['ct'][2]['title']);
+					$('#tt8').html(data['ct'][2]['bewrite']);
+					$('#tt9').html(data['ct'][2]['bewrite1']); 
+					$('#showli4').hide();
+				}else{
+					$('#showli1').show();
+					$('#showli2').show();
+					$('#showli3').show();
+					$('#showli4').show();
+					$('#tt1').html(data['ct'][0]['title']);
+					$('#tt2').html(data['ct'][0]['bewrite']);
+					$('#tt3').html(data['ct'][0]['bewrite1']); 
+					$('#tt4').html(data['ct'][1]['title']);
+					$('#tt5').html(data['ct'][1]['bewrite']);
+					$('#tt6').html(data['ct'][1]['bewrite1']);
+					$('#tt7').html(data['ct'][2]['title']);
+				    $('#tt8').html(data['ct'][2]['bewrite']);
+					$('#tt9').html(data['ct'][2]['bewrite1']); 
+					$('#tt10').html(data['ct'][3]['title']);
+					$('#tt11').html(data['ct'][3]['bewrite']);
+					$('#tt12').html(data['ct'][3]['bewrite1']);
+				}
+			},"json")	
+
+	};
+	//关闭弹出层
+	function CloseDiv(show_div, bg_div) {
+		document.getElementById(show_div).style.display = 'none';
+		document.getElementById(bg_div).style.display = 'none';
+		window.onmousewheel = function(){
+			return true;     
+		}
+		$("#shyao1").css("display","none");
+		$("#shyao2").css("display","none");
+		$("#shyao3").css("display","none");
+		$("#shyao4").css("display","none");
+		$("#bgs1").css("display","block");
+		$("#bgs2").css("display","block");
+		$("#bgs3").css("display","block");
+		$("#bgs4").css("display","block");
+		$("#b-bgs1").css("display","none");
+		$("#b-bgs2").css("display","none");
+		$("#b-bgs3").css("display","none");
+		$("#b-bgs4").css("display","none");
+	};
+
+	//弹出隐藏层
+	function ShowDivs(show_div, bg_div,lng,lat,adds) {
+		initMap(lng,lat,adds);//创建和初始化地图
+		document.getElementById(show_div).style.display = 'block';
+		document.getElementById(bg_div).style.display = 'block';
+		
+		var bgdiv = document.getElementById(bg_div);
+		bgdiv.style.width = document.body.scrollWidth;
+		window.onmousewheel = function(){
+			window.location="http://www.new-mix.com.cn/#page2";       
+			}
+		// bgdiv.style.height = $(document).height();
+
+	};
+	
+	function colortext(){
+			
+	$("#pagactive1").removeClass("active2").addClass("active");
+	$("#pagactive2").removeClass("active").addClass("active2");
+	}
+	
+	
+</script> 
+  <style>
+.invisible {
+	display: none;
+}
+</style> 
+ </head> 
+ <body> 
+  <div id="header" class="invisible"> 
+   <div class="headerWrap"> 
+    <div class="menulogo"> 
+     <a href="http://www.new-mix.com.cn"> <img src="res/menulogo.png" /> </a> 
+    </div> 
+    <ul id="menu"> 
+     <li data-menuanchor="首页" class="active"><a href="index.html">首页</a></li> 
+     <li data-menuanchor="新合概述"><a href="#新合概述">新合概述</a></li> 
+     <li data-menuanchor="解决方案"><a href="#解决方案">解决方案</a></li> 
+     <li data-menuanchor="合作伙伴"><a href="#合作伙伴">合作伙伴</a></li> 
+     <li data-menuanchor="新合案例"><a href="#新合案例">新合案例</a></li> 
+     <li data-menuanchor="新合动态"><a href="#新合动态">新合动态</a></li> 
+     <li><a href="#新合概述/联系我们">联系我们</a></li> 
+    </ul> 
+   </div> 
+  </div> 
+  <div id="fullpage"> 
+   <div class="section" id="section0"> 
+    <div id="front_video"> 
+     <video autoplay loop poster="res/topbg.png" id="bgvid"> 
+      <source src="res/topngs.webm" type="video/webm"></source> 
+      <source src="res/topngs.mp4" type="video/mp4"></source> 您的浏览器不支持video标签. 
+     </video> 
+     <div class="centertitle">
+      <img src="res/toimgsa.png" />
+      <br /> 
+     </div> 
+    </div> 
+    <div class="xialaibox">
+     <a href="#新合概述"><img src="res/downshow.png" /></a>
+    </div> 
+    <div class="gaishucontent"> 
+     <div class="gaishucn">
+       成就合作伙伴的业务是我们始终如一的愿景。我们致力于在数字领域为合作伙伴提供最佳的整合解决方案，包括媒介计划与购买、数字策略服务、社交媒体营销、移动营销、创意设计、网站建设等多个领域。我们大量的营销精英正翘首启足，只为实现我们对合作伙伴的承诺和愿景！
+      <br /> 
+      <font class="gaishuen">Our only purpose is to help our customers grow their business. We keep devoting ourselves to providing best integration solution, including Media Planning &amp; Buying, Digital Strategic Planning, Social Marketing, Mobile Marketing, Digital Creative, Web Design…. In order to keep our promise to partners, we’ve prepared various talents!</font> 
+     </div> 
+    </div> 
+   </div> 
+   <div class="section" id="section1"> 
+    <div class="slide swipe"> 
+     <div class="mixbox"> 
+      <img src="res/zhaopin.png" width="100%" class="imgshows imgshow4s" id="imgshow4s" usemap="#miximg" border="0" /> 
+      <!-- onclick="ShowDiv('MyDiv','fade')"--> 
+      <map name="miximg" id="miximg" class="mixmap"> <area shape="circle" coords="580,61,47" onclick="ShowDiv('MyDiv','fade','4')" title="整合策略"></area> <area shape="circle" coords="656,149,46" onclick="ShowDiv('MyDiv','fade','5')" title="产品技术"></area> <area shape="circle" coords="843,157,50" onclick="ShowDiv('MyDiv','fade','6')" title="创意网建"></area> <area shape="circle" coords="765,320,51" onclick="ShowDiv('MyDiv','fade','7')" title="内容营销"></area> <area shape="circle" coords="485,189,44" onclick="ShowDiv('MyDiv','fade','3')" title="媒介"></area> <area shape="circle" coords="374,185,43" onclick="ShowDiv('MyDiv','fade','2')" title="客服服务"></area> <area shape="circle" coords="355,297,47" onclick="ShowDiv('MyDiv','fade','1')" title="行政人事财务"></area> </map> 
+     </div> 
+    </div> 
+    <div class="slide"> 
+     <div class="sfull">
+      <img src="res/xinhegaishu.gif" id="img_ginhegaishu" /> 
+     </div> 
+    </div> 
+    <div class="slide"> 
+     <div class="sfull">
+      <img src="res/guanliceng.png" id="img_guanliceng" /> 
+     </div> 
+    </div> 
+    <div class="slide"> 
+     <div class="contactusbox"> 
+      <div>
+       <img src="res/contactus.png" id="imgshow3s" />
+      </div> 
+      <div class="ditubox"> 
+       <table width="100%" border="0"> 
+        <tbody> 
+         <tr> 
+          <td align="center">
+           <div class="citybox" id="bjbox" onclick="ShowDivs('showdivs','clos','116.415162','39.961963',0)"> 
+            <div class="cityblock"> 
+             <div class="cityaddrbox"> 
+              <span class="cityaddr">北京市东城区安定门外大街136号皇城国际中心A座16层</span>
+              <br /> 
+              <span class="citytel">TEL:010-62666828</span> 
+             </div> 
+            </div> 
+            <span class="cityname">BEIJING</span>
+           </div>  </td> 
+          <td width="33.3%" align="center">
+           <div class="citybox" id="shbox" onclick="ShowDivs('showdivs','clos','121.424109','31.209549',1)"> 
+            <div class="cityblock"> 
+             <div class="cityaddrbox"> 
+              <span class="cityaddr">上海市长宁区杨宅路199号东华时尚创意园5楼E座</span>
+              <br /> 
+              <span class="citytel">TEL:021-62959608</span> 
+             </div> 
+            </div> 
+            <span class="cityname">SHANGHAI</span>
+           </div>  </td> 
+          <td width="33.4%" align="center">
+           <div class="citybox" id="gzbox" onclick="ShowDivs('showdivs','clos','113.347767','23.119542',2)"> 
+            <div class="cityblock"> 
+             <div class="cityaddrbox"> 
+              <span class="cityaddr">广州市天河区珠江新城海月路407号新城海滨花园1栋2楼</span>
+              <br /> 
+              <span class="citytel">TEL:020-38350184</span> 
+             </div> 
+            </div> 
+            <span class="cityname">GUANGZHOU</span>
+           </div>  </td> 
+         </tr> 
+        </tbody> 
+       </table> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="slide"> 
+     <div class="sfull"> 
+      <img src="res/zhaopin.png" width="100%" class="imgshows imgshow4s" id="imgshow4s" usemap="#miximg" border="0" /> 
+      <!-- onclick="ShowDiv('MyDiv','fade')"--> 
+      <map name="miximg" id="miximg" class="mixmap"> <area shape="circle" coords="580,61,47" onclick="ShowDiv('MyDiv','fade','4')" title="整合策略"></area> <area shape="circle" coords="656,149,46" onclick="ShowDiv('MyDiv','fade','5')" title="产品技术"></area> <area shape="circle" coords="843,157,50" onclick="ShowDiv('MyDiv','fade','6')" title="创意网建"></area> <area shape="circle" coords="765,320,51" onclick="ShowDiv('MyDiv','fade','7')" title="内容营销"></area> <area shape="circle" coords="485,189,44" onclick="ShowDiv('MyDiv','fade','3')" title="媒介"></area> <area shape="circle" coords="374,185,43" onclick="ShowDiv('MyDiv','fade','2')" title="客服服务"></area> <area shape="circle" coords="355,297,47" onclick="ShowDiv('MyDiv','fade','1')" title="行政人事财务"></area> </map> 
+     </div> 
+    </div> 
+    <div class="slide swipe"> 
+     <div class="sfull">
+      <img src="res/xinhegaishu.gif" id="img_ginhegaishu" />
+     </div> 
+    </div> 
+   </div>
+    <div class="section" id="section2"> 
+     <div class="slide swipe"> 
+      <div class="sfull"> <img src="res/yidongyingxiao.gif" /> </div>
+     </div> 
+     <div class="slide"> 
+      <div class="sfull"> <img src="res/jiejuefangan.png" />  </div>
+     </div> 
+     <div class="slide"> 
+      <div class="sfull"> <img src="res/shuziyule.gif" />  </div>
+     </div> 
+     <div class="slide"> 
+      <div class="sfull"> <img src="res/shuzimeijie.gif" />  </div>
+     </div> 
+     <div class="slide"> 
+      <div class="sfull"> <img src="res/shuzigongguan.gif" />  </div>
+     </div> 
+     <div class="slide"> 
+      <div class="sfull"> <img src="res/shuzichuangyi.gif" />  </div>
+     </div> 
+     <div class="slide"> 
+      <div class="sfull"> <img src="res/yidongyingxiao.gif" />  </div>
+     </div> 
+     <div class="slide swipe"> 
+      <div class="sfull"> <img src="res/jiejuefangan.png" />  </div>
+     </div> 
+    </div> 
+    <div class="section" id="section3"> 
+     <div class="stitle"> 
+      <img src="res/partner.png" /> 
+     <div class="scontent"> 
+      <table width="100%" border="1" cellpadding="0" cellspacing="0"> 
+       <tbody> 
+        <tr> 
+         <td><a href="http://www.peugeot.com.cn/" target="_blank"> <img title="标致品牌" class="shrink" src="res/partner/biaozhi.png" /> </a></td> 
+         <td><a href="http://www.dongfeng-citroen.com.cn/citroen/index.s" target="_blank"> <img title="东风雪铁龙" class="shrink" src="res/partner/dfxuetielong.png" /> </a></td> 
+         <td><a href="http://www.fiat.com.cn/" target="_blank"> <img title="菲亚特" class="shrink" src="res/partner/fiat.png" /> </a></td> 
+         <td><a href="http://www.beijing-hyundai.com.cn/" target="_blank"> <img title="北京现代" class="shrink" src="res/partner/xiandai.png" /> </a></td> 
+         <td><a href="http://www.psa-peugeot-citroen.com/en" target="_blank"> <img title="标致雪铁龙集团官網" class="shrink" src="res/partner/bzxuetielong.png" /> </a></td> 
+        </tr> 
+        <tr> 
+         <td><a href="http://www.cowinhome.com/" target="_blank"><img title="凯翼汽车" class="shrink" src="res/partner/kaiyi.png" /></a></td> 
+         <td><a href="http://www.chevrolet.com.cn/brandsite/" target="_blank"><img title="雪佛兰" class="shrink" src="res/partner/xuefulan.png" /></a></td> 
+         <td><a href="http://www.remymartin.com/en/" target="_blank"><img title="remy martin" class="shrink" src="res/partner/martin.png" /></a></td> 
+         <td><a href="https://www.jnj.com.cn/" target="_blank"><img title="强生" class="shrink" src="res/partner/qiangsheng.png" /></a></td> 
+         <td><a href="" target="_blank"><img title="interpublic集团" class="shrink" src="res/partner/interpublic.png" /></a></td> 
+        </tr> 
+        <tr> 
+         <td><a href="http://www.taikang.com/" target="_blank"> <img title="秦康人寿" class="shrink" src="res/partner/taikang.png" /> </a></td> 
+         <td><a href="http://www.icbc.com.cn/icbc/" target="_blank"> <img title="中国工商银行" class="shrink" src="res/partner/gongshang.png" /> </a></td> 
+         <td><a href="http://bank.pingan.com/index.shtml?WT.mc_id=c03-BD" target="_blank"> <img title="中国平安" class="shrink" src="res/partner/pingan.png" /> </a></td> 
+         <td><a href="http://www.chinalife.com.cn/publish/zhuzhan/index." target="_blank"> <img title="中国人寿" class="shrink" src="res/partner/renshou.png" /> </a></td> 
+         <td><a href="http://www.360.cn/" target="_blank"> <img title="360安全中心" class="shrink" src="res/partner/360.png" /> </a></td> 
+        </tr> 
+        <tr> 
+         <td><a href="http://world2.wanmei.com/article_news/news_game/20" target="_blank"> <img class="shrink" title="完美世界" src="res/partner/wanmei.png" /> </a></td> 
+         <td><a href="http://www.ztgame.com/" target="_blank"> <img class="shrink" title="巨人网络" src="res/partner/juren.png" /> </a></td> 
+         <td><a href="http://www.tiancity.com/homepage/" target="_blank"> <img class="shrink" title="世纪天成" src="res/partner/tiancheng.png" /> </a></td> 
+         <td><a href="http://www.sdo.com/" target="_blank"> <img class="shrink" title="盛大网络" src="res/partner/shengda.png" /> </a></td> 
+         <td><a href="http://www.shopin.net/index.html?cid=baidu-pp-bp-6" target="_blank"> <img class="shrink" title="上品折扣网" src="res/partner/shangpin.png" /> </a></td> 
+        </tr> 
+        <tr> 
+         <td><a href="http://58.com/changecity.aspx" target="_blank"> <img class="shrink" title="58同城" src="res/partner/58.png" /> </a></td> 
+         <td><a href="http://www.gaopeng.com/shanghai" target="_blank"> <img class="shrink" title="高朋" src="res/partner/gaopeng.png" /> </a></td> 
+         <td><a href="http://www.asus.com.cn/" target="_blank"> <img class="shrink" title="ASUS" src="res/partner/asus.png" /> </a></td> 
+         <td><a href="http://www.vancl.com/" target="_blank"> <img class="shrink" title="凡客诚品" src="res/partner/fanke.png" /> </a></td> 
+         <td><a href="http://www.li-ning.com.cn/" target="_blank"> <img class="shrink" title="李宁" src="res/partner/lining.png" /> </a></td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     </div> 
+    </div> 
+    <div class="section" id="section4"> 
+     <div class="stitle"> 
+      <img src="res/anli.png" /> 
+     <div class="scontent"> 
+      <ul> 
+       <li> <a onclick="ShowDiv2('MyDiv2','fade2','11')"> 
+         <div class="cover">
+          <img src="res/anli/biaozhi308.png" alt="东风标致308“乐行动”" />
+         </div> 
+         <div class="info"> 
+          <p class="infotitle">东风标致308“乐行动”</p> 
+          <p class="infosubtitle">以炒作大电影模式打造微电影大片</p> 
+          <div>
+           <img src="res/mclick.png" /> 
+          </div> 
+         </div> </a> </li> 
+       <li> <a onclick="ShowDiv2('MyDiv2','fade2','11')"> 
+         <div class="cover">
+          <img src="res/anli/fiat2014.png" alt="FIAT 2014 北京车展 网络营销方案" />
+         </div> 
+         <div class="info"> 
+          <p class="infotitle">FIAT 2014 北京车展 网络营销方案</p> 
+          <p class="infosubtitle">在车展前传播活动 吸引用户前往菲亚特展台</p> 
+          <div>
+           <img src="res/mclick.png" /> 
+          </div> 
+         </div> </a> </li> 
+       <li> <a onclick="ShowDiv2('MyDiv2','fade2','11')"> 
+         <div class="cover">
+          <img src="res/anli/ailishe.png" alt="东风雪铁龙全新爱丽舍 “自信人生三部曲”" />
+         </div> 
+         <div class="info"> 
+          <p class="infotitle">东风雪铁龙全新爱丽舍 “自信人生三部曲”</p> 
+          <p class="infosubtitle">三位一体的内容营销传播策略，生动演绎自信故事</p> 
+          <div>
+           <img src="res/mclick.png" /> 
+          </div> 
+         </div> </a> </li> 
+       <li> <a onclick="ShowDiv2('MyDiv2','fade2','11')"> 
+         <div class="cover">
+          <img src="res/anli/biaozhi3008.png" alt="“逐乐蓝天‘E’动之旅” 东风标致3008整合营销" />
+         </div> 
+         <div class="info"> 
+          <p class="infotitle">“逐乐蓝天‘E’动之旅” 东风标致3008整合营销</p> 
+          <p class="infosubtitle">整合各渠道优势，结合热门话题，增加品牌好感度，传播产品卖点</p> 
+          <div>
+           <img src="res/mclick.png" /> 
+          </div> 
+         </div> </a> </li> 
+       <li> <a onclick="ShowDiv2('MyDiv2','fade2','11')"> 
+         <div class="cover">
+          <img src="res/anli/biaozhi2008.png" alt="东风标致2008&amp; 《天天富翁》联合推广" />
+         </div> 
+         <div class="info"> 
+          <p class="infotitle">东风标致2008&amp; 《天天富翁》联合推广</p> 
+          <p class="infosubtitle">热门移动游戏线上植入合作，带动线下体验</p> 
+          <div>
+           <img src="res/mclick.png" /> 
+          </div> 
+         </div> </a> </li> 
+       <li> <a onclick="ShowDiv2('MyDiv2','fade2','11')"> 
+         <div class="cover">
+          <img src="res/anli/pingan.png" alt="中国平安出行季" />
+         </div> 
+         <div class="info"> 
+          <p class="infotitle">中国平安出行季</p> 
+          <p class="infosubtitle">选用精准投放 精确定位到潜在用户</p> 
+          <div>
+           <img src="res/mclick.png" /> 
+          </div> 
+         </div> </a> </li> 
+       <li> <a onclick="ShowDiv2('MyDiv2','fade2','11')"> 
+         <div class="cover">
+          <img src="res/anli/wanmei.png" alt="完美世界数字整合 传播营销案例" />
+         </div> 
+         <div class="info"> 
+          <p class="infotitle">完美世界数字整合 传播营销案例</p> 
+          <p class="infosubtitle">以明星效应提升游戏人气</p> 
+          <div>
+           <img src="res/mclick.png" /> 
+          </div> 
+         </div> </a> </li> 
+       <li> <a onclick="ShowDiv2('MyDiv2','fade2','11')"> 
+         <div class="cover">
+          <img src="res/anli/nuannuan.png" alt="带上美丽去旅行 《暖暖环游世界》营销推广" />
+         </div> 
+         <div class="info"> 
+          <p class="infotitle">带上美丽去旅行 《暖暖环游世界》营销推广</p> 
+          <p class="infosubtitle">选择电商，进行联合推广</p> 
+          <div>
+           <img src="res/mclick.png" /> 
+          </div> 
+         </div> </a> </li> 
+      </ul> 
+     </div> 
+     </div> 
+    </div> 
+    <div class="section" id="section5"> 
+     <div> 
+      <div> 
+       <div> 
+        <img src="res/dtimgs.png" /> 
+       </div> 
+       <div> 
+        <ul> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','120','51')"> 新合传播集团赢得中国平安保险“出行季”网络推广业务 </a></li> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','119','51')"> 新合传播集团荣获 2014TMA移动营销大奖-移动O2O </a></li> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','118','51')"> 新合传播集团荣获 2014TMA移动营销大奖-手机游戏营 </a></li> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','117','51')"> 新合成为人头马在中国区唯一的数字内容整合营销服务商 </a></li> 
+        </ul> 
+       </div> 
+      </div> 
+      <div> 
+       <div> 
+        <img src="res/newbtimg.png" /> 
+       </div> 
+       <div> 
+        <ul> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','132','52')"> TMA移动营销大奖终审评选精彩落幕 </a></li> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','131','52')"> Social CRM 2014-时趣社会化大数据营销战略 </a></li> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','130','52')"> 优酷土豆与小米战略合作，推动多屏文化生态系统 </a></li> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','129','52')"> 一场有关“薄”的文案大赛上演，貌似早有预谋！ </a></li> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','128','52')"> 首届One Show中华创意节金铅笔奖项评审会在北京举行 </a></li> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','127','52')"> 第一届TMA移动营销大奖颁奖盛典完美落幕 </a></li> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','126','52')"> 百度世界大会2014 多款奇葩智能新品 </a></li> 
+         <li> <a onclick="ShowDiv3('MyDiv3','fade3','125','52')"> 2014 One Show 中华青年创意节在北京成功举行 </a></li> 
+        </ul> 
+       </div> 
+      </div> 
+     </div> 
+     <div> 
+      <a href="index.html"><img src="res/topback.png" /></a> 
+     </div> 
+     <div> 
+      <p> <a href="http://www.new-mix.com.cn/#新合概述/关于我们">关于我们</a><a href="http://www.new-mix.com.cn/#合作伙伴">合作伙伴</a><a href="http://www.new-mix.com.cn/#新合概述/联系我们" onclick="aboutSw()">联系我们</a><a href="http://www.new-mix.com.cn/#新合概述/人才招聘">人才招聘</a></p> 
+      <p>&copy;2015 New-Mix <a href="http://www.beianbeian.com/gaoji?field=mainLicense&amp;value=%E6%B2%AAICP%E5%A4%8715000020%E5%8F%B7" target="_blank">沪ICP备15000020号</a></p> 
+     </div> 
+    </div> 
+   </div>  
+  </div>
+ </body>
+</html>

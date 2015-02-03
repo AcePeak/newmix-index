@@ -1,0 +1,255 @@
+/* CSS Document */
+
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	padding: 0;
+	margin: 0;
+	font-family: "黑体";
+}
+a {
+	text-decoration: none;
+}
+#header {
+	position: fixed;
+	height: 73px;
+	background: #FFF;
+	border: 1px #CCC solid;
+	width: 100%;
+	z-index: 20;
+	text-align: center;
+	color: #5f6a7d;
+	font-family: "黑体";
+	font-size: 16px;
+	font-weight: bold;
+	padding: 10px 0 0 0;
+	top: 0px;
+}
+#header .headerWrap {
+	width: 80%;
+	margin: 0 auto;
+}
+#header .menulogo {
+	float: left;
+}
+#header .menulogo img {
+	width: 80%;
+}
+#menu {
+	z-index: 21;
+	padding-top: 15px;
+	float: right;
+}
+#menu li {
+	display: inline-block;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	float: left;
+}
+#menu li.active a {
+}
+#menu li a {
+	text-decoration: none;
+	color: #5f6a7d;
+	padding: 9px 18px;
+	display: block;
+}
+#front_video {
+	width: 100%;
+	height: 100%;
+	background: none;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	z-index: 1;
+	overflow: hidden;
+}
+#bgvid {
+	position: absolute;
+	top: -50px;
+	left: 0;
+	min-width: 100%;
+	min-height: 80%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+	display: block;
+}
+#section0 {
+	background: #000000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+#section0 .centertitle {
+	width: 50%;
+	margin: 10% auto;
+	padding-top: 5%;
+	text-align: center;
+}
+#section0 .xialaibox {
+	height: 169px;
+	text-align: center;
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+	bottom: 123px;
+}
+#section0 .gaishucontent {
+	height: 123px;
+	text-align: center;
+	position: absolute;
+	z-index: 999;
+	width: 100%;
+	bottom: 0;
+	background: url(../res/textbgs.png);
+}
+#section0 .gaishucontent .gaishucn {
+	margin: 12px 10% 12px 10%;
+	min-height: 50px;
+	font-size: 14px;
+	font-family: "黑体";
+	line-height: 21px;
+	text-align: left;
+	color: #FFF;
+}
+#section0 .gaishucontent .gaishuen {
+	opacity: 0.5;
+}
+.slide .imgWrap
+{
+	width: 80%;
+	height:80%;
+	margin: 10% auto;
+}
+.slide .imgWrap img
+{
+	width:100%;
+}
+
+
+.contactusbox
+{
+	text-align: center;
+margin: 8% auto;
+}
+.ditubox
+{
+	text-align: center;
+width: 80%;
+margin: 8% auto;
+}
+
+.ditubox .citybox
+{
+	width: 240px;
+height: 240px;
+border-radius: 50%;
+position: relative;
+}
+.citybox .cityaddrbox
+{
+	text-align: center;
+vertical-align: middle;
+margin: 0px auto;
+height: 100%;
+padding: 60px 20px;
+}
+
+.citybox .cityaddr
+{
+	font-family: 黑体;
+font-size: 14px;
+color: rgb(127, 127, 127);
+line-height: 25px;
+}
+.citybox .citytel
+{
+	font-family: 黑体;
+font-size: 14px;
+color: rgb(127, 127, 127);
+line-height: 35px;
+}
+.citybox .cityname
+{
+	border-radius: 50%;
+position: absolute;
+top: 250px;
+font-family: 黑体;
+font-size: 14px;
+text-align: center;
+width: 100%;
+left: 0px;
+}
+#bjbox
+{
+	background-image: url(../res/bjditu.png);
+background-size: 100%;
+}
+#shbox
+{
+	background-image: url(../res/shditu.png);
+background-size: 100%;
+}
+#gzbox
+{
+	background-image: url(../res/gzditu.png);
+background-size: 100%;
+}
+.sfull
+{
+	width:80%;
+	margin:7% auto;
+	text-align:center;
+}
+.sfull img
+{
+	width:100%;
+}
+.stitle
+{
+	width:80%;
+	margin:7% auto;
+	text-align:center;
+}
+#section2 .stitle
+{
+	margin:5% auto;
+}
+#section3 table
+{
+	width:80%;
+	border: 1px #eeeeee solid;
+	margin: 0 auto;
+}
+#section3 table tr
+{
+	height: 80px;
+}
+#section3 table img
+{
+	width: 113px;
+	height:67px;
+}
+#section4
+{
+	background: url(../res/anlibg.png);
+	background-size: cover;
+	padding-top: 0%;
+}
+#section4 li {
+height: auto;
+padding: 5px;
+width: 23%;
+display: inline-block;
+zoom: 1;
+}
+#section4 .cover img {
+width:100%;
+}
+
+#section4 .info {
+display:none;
+text-align: center;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
