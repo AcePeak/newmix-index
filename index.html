@@ -14,7 +14,7 @@
   <meta name="keywords" content="新合文化传播集团 网络广告代理公司 互联网广告代理公司 互动整合营销 数字营销 数字媒介代理 汽车广告 移动代理 数字娱乐营销 数字创意 互动策略 内容营销" /> 
   <meta name="description" content="新合传播致力于在数字领域为合作伙伴提供最佳的整合解决方案，包括媒介计划与购买、数字策略服务、社交媒体营销、移动营销、创意设计、网站建设等多个领域。新合的营销精英正翘首启足，只为实现我们对合作伙伴的承诺和愿景。" /> 
   <link rel="shortcut icon" type="image/x-icon" href="res/ico.ico" /> 
-  <link rel="stylesheet" type="text/css" href="css/jquery.fullPagev2.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/ap.fullPageSwipeLoop.css" /> 
   <link rel="stylesheet" type="text/css" href="css/newmix.css" /> 
   <script type="text/javascript">
 if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
@@ -36,7 +36,7 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
 </script> 
   <script type="text/javascript" src="js/jquery.min.js"></script> 
   <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
-  <script type="text/javascript" src="js/jquery.fullPagev2.js"></script> 
+  <script type="text/javascript" src="js/ap.fullPageSwipeLoop.js"></script> 
   <!--[if IE]>
 		<script type="text/javascript">
 			 var console = { log: function() {} };
@@ -51,7 +51,7 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
 				scrollingSpeed: 1000,
 				slidesNavigation: true,
 				navigation: true,
-				continuousVerticalLoop: true,
+				continuousHorizontal: true,
 				onLeave: function(index, nextIndex, direction){
 					if(index == 1){
 						$("#header").removeClass("invisible");
@@ -353,7 +353,7 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
      <a href="http://www.new-mix.com.cn"> <img src="res/menulogo.png" /> </a> 
     </div> 
     <ul id="menu"> 
-     <li data-menuanchor="首页" class="active"><a href="index.html">首页</a></li> 
+     <li data-menuanchor="首页" class="active"><a href="#首页">首页</a></li> 
      <li data-menuanchor="新合概述"><a href="#新合概述">新合概述</a></li> 
      <li data-menuanchor="解决方案"><a href="#解决方案">解决方案</a></li> 
      <li data-menuanchor="合作伙伴"><a href="#合作伙伴">合作伙伴</a></li> 
@@ -387,24 +387,24 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
     </div> 
    </div> 
    <div class="section" id="section1"> 
-    <div class="slide swipe"> 
-     <div class="mixbox"> 
+    <div class="slide swipe" data-anchor="人才招聘"> 
+     <div class="sfull"> 
       <img src="res/zhaopin.png" width="100%" class="imgshows imgshow4s" id="imgshow4s" usemap="#miximg" border="0" /> 
       <!-- onclick="ShowDiv('MyDiv','fade')"--> 
       <map name="miximg" id="miximg" class="mixmap"> <area shape="circle" coords="580,61,47" onclick="ShowDiv('MyDiv','fade','4')" title="整合策略"></area> <area shape="circle" coords="656,149,46" onclick="ShowDiv('MyDiv','fade','5')" title="产品技术"></area> <area shape="circle" coords="843,157,50" onclick="ShowDiv('MyDiv','fade','6')" title="创意网建"></area> <area shape="circle" coords="765,320,51" onclick="ShowDiv('MyDiv','fade','7')" title="内容营销"></area> <area shape="circle" coords="485,189,44" onclick="ShowDiv('MyDiv','fade','3')" title="媒介"></area> <area shape="circle" coords="374,185,43" onclick="ShowDiv('MyDiv','fade','2')" title="客服服务"></area> <area shape="circle" coords="355,297,47" onclick="ShowDiv('MyDiv','fade','1')" title="行政人事财务"></area> </map> 
      </div> 
     </div> 
-    <div class="slide"> 
+    <div class="slide" data-anchor="新合概述"> 
      <div class="sfull">
       <img src="res/xinhegaishu.gif" id="img_ginhegaishu" /> 
      </div> 
     </div> 
-    <div class="slide"> 
+    <div class="slide" data-anchor="管理层介绍"> 
      <div class="sfull">
       <img src="res/guanliceng.png" id="img_guanliceng" /> 
      </div> 
     </div> 
-    <div class="slide"> 
+    <div class="slide" data-anchor="联系我们"> 
      <div class="contactusbox"> 
       <div>
        <img src="res/contactus.png" id="imgshow3s" />
@@ -452,42 +452,42 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
       </div> 
      </div> 
     </div> 
-    <div class="slide"> 
+    <div class="slide" data-anchor="人才招聘"> 
      <div class="sfull"> 
       <img src="res/zhaopin.png" width="100%" class="imgshows imgshow4s" id="imgshow4s" usemap="#miximg" border="0" /> 
       <!-- onclick="ShowDiv('MyDiv','fade')"--> 
       <map name="miximg" id="miximg" class="mixmap"> <area shape="circle" coords="580,61,47" onclick="ShowDiv('MyDiv','fade','4')" title="整合策略"></area> <area shape="circle" coords="656,149,46" onclick="ShowDiv('MyDiv','fade','5')" title="产品技术"></area> <area shape="circle" coords="843,157,50" onclick="ShowDiv('MyDiv','fade','6')" title="创意网建"></area> <area shape="circle" coords="765,320,51" onclick="ShowDiv('MyDiv','fade','7')" title="内容营销"></area> <area shape="circle" coords="485,189,44" onclick="ShowDiv('MyDiv','fade','3')" title="媒介"></area> <area shape="circle" coords="374,185,43" onclick="ShowDiv('MyDiv','fade','2')" title="客服服务"></area> <area shape="circle" coords="355,297,47" onclick="ShowDiv('MyDiv','fade','1')" title="行政人事财务"></area> </map> 
      </div> 
     </div> 
-    <div class="slide swipe"> 
+    <div class="slide swipe" data-anchor="新合概述"> 
      <div class="sfull">
       <img src="res/xinhegaishu.gif" id="img_ginhegaishu" />
      </div> 
     </div> 
    </div>
     <div class="section" id="section2"> 
-     <div class="slide swipe"> 
+     <div class="slide swipe" data-anchor="移动营销"> 
       <div class="sfull"> <img src="res/yidongyingxiao.gif" /> </div>
      </div> 
-     <div class="slide"> 
+     <div class="slide" data-anchor="解决方案"> 
       <div class="sfull"> <img src="res/jiejuefangan.png" />  </div>
      </div> 
-     <div class="slide"> 
+     <div class="slide" data-anchor="数字娱乐"> 
       <div class="sfull"> <img src="res/shuziyule.gif" />  </div>
      </div> 
-     <div class="slide"> 
+     <div class="slide" data-anchor="数字媒介"> 
       <div class="sfull"> <img src="res/shuzimeijie.gif" />  </div>
      </div> 
-     <div class="slide"> 
+     <div class="slide" data-anchor="数字公关"> 
       <div class="sfull"> <img src="res/shuzigongguan.gif" />  </div>
      </div> 
-     <div class="slide"> 
+     <div class="slide" data-anchor="数字创意"> 
       <div class="sfull"> <img src="res/shuzichuangyi.gif" />  </div>
      </div> 
-     <div class="slide"> 
+     <div class="slide" data-anchor="移动营销"> 
       <div class="sfull"> <img src="res/yidongyingxiao.gif" />  </div>
      </div> 
-     <div class="slide swipe"> 
+     <div class="slide swipe" data-anchor="解决方案"> 
       <div class="sfull"> <img src="res/jiejuefangan.png" />  </div>
      </div> 
     </div> 
@@ -671,7 +671,7 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
       <a href="index.html"><img src="res/topback.png" /></a> 
      </div> 
      <div> 
-      <p> <a href="http://www.new-mix.com.cn/#新合概述/关于我们">关于我们</a><a href="http://www.new-mix.com.cn/#合作伙伴">合作伙伴</a><a href="http://www.new-mix.com.cn/#新合概述/联系我们" onclick="aboutSw()">联系我们</a><a href="http://www.new-mix.com.cn/#新合概述/人才招聘">人才招聘</a></p> 
+      <p> <a href="http://www.new-mix.com.cn/#新合概述/关于我们">关于我们</a><a href="http://www.new-mix.com.cn/#合作伙伴">合作伙伴</a><a href="http://www.new-mix.com.cn/#新合概述/联系我们">联系我们</a><a href="http://www.new-mix.com.cn/#新合概述/人才招聘">人才招聘</a></p> 
       <p>&copy;2015 New-Mix <a href="http://www.beianbeian.com/gaoji?field=mainLicense&amp;value=%E6%B2%AAICP%E5%A4%8715000020%E5%8F%B7" target="_blank">沪ICP备15000020号</a></p> 
      </div> 
     </div> 
