@@ -17,6 +17,8 @@
   <link rel="stylesheet" type="text/css" href="css/ap.fullPageSwipeLoop.css" /> 
   <link rel="stylesheet" type="text/css" href="css/newmix.css" /> 
   <script type="text/javascript">
+
+/*
 if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
     if(window.location.href.indexOf("?mobile")<0){
         try{
@@ -33,6 +35,8 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
         }catch(e){}
     }
 }
+
+*/
 </script> 
   <script type="text/javascript" src="js/jquery.min.js"></script> 
   <script type="text/javascript" src="js/jquery-ui.min.js"></script> 
@@ -60,6 +64,10 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
 					{
 						$("#header").addClass("invisible");
 					}
+				},
+				afterRender : function() {
+					//playing the video
+					$('video').get(0).play();
 				},
 			});
 		});
@@ -366,6 +374,18 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
   <div id="fullpage"> 
    <div class="section" id="section0"> 
     <div id="front_video"> 
+    <div class="front_header">
+    	<div class="front_header_wrap"><a class="front_logo" href="index.html"><img src="res/logo2.png" /></a>
+        <ul id="front_menu"> 
+         <li data-menuanchor="新合概述"><a href="#新合概述">新合概述</a></li> 
+         <li data-menuanchor="解决方案"><a href="#解决方案">解决方案</a></li> 
+         <li data-menuanchor="合作伙伴"><a href="#合作伙伴">合作伙伴</a></li> 
+         <li data-menuanchor="新合案例"><a href="#新合案例">新合案例</a></li> 
+         <li data-menuanchor="新合动态"><a href="#新合动态">新合动态</a></li> 
+         <li><a href="#新合概述/联系我们">联系我们</a></li> 
+        </ul> 
+        </div>
+    </div>
      <video autoplay loop poster="res/topbg.png" id="bgvid"> 
       <source src="res/topngs.webm" type="video/webm"></source> 
       <source src="res/topngs.mp4" type="video/mp4"></source> 您的浏览器不支持video标签. 
@@ -375,6 +395,7 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
       <br /> 
      </div> 
     </div> 
+    <div class="gaishubox">
     <div class="xialaibox">
      <a href="#新合概述"><img src="res/downshow.png" /></a>
     </div> 
@@ -385,6 +406,7 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
       <font class="gaishuen">Our only purpose is to help our customers grow their business. We keep devoting ourselves to providing best integration solution, including Media Planning &amp; Buying, Digital Strategic Planning, Social Marketing, Mobile Marketing, Digital Creative, Web Design…. In order to keep our promise to partners, we’ve prepared various talents!</font> 
      </div> 
     </div> 
+    </div>
    </div> 
    <div class="section" id="section1"> 
     <div class="slide swipe" data-anchor="人才招聘"> 
@@ -635,12 +657,10 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
      </div> 
     </div> 
     <div class="section" id="section5"> 
-     <div> 
-      <div> 
-       <div> 
-        <img src="res/dtimgs.png" /> 
-       </div> 
-       <div> 
+     <div class="sfull"> 
+      <div class="xinwenleft"> 
+       <img class="xinwentitle" src="res/dongtai.png" /> 
+       <div class="xinwenlist"> 
         <ul> 
          <li> <a onclick="ShowDiv3('MyDiv3','fade3','120','51')"> 新合传播集团赢得中国平安保险“出行季”网络推广业务 </a></li> 
          <li> <a onclick="ShowDiv3('MyDiv3','fade3','119','51')"> 新合传播集团荣获 2014TMA移动营销大奖-移动O2O </a></li> 
@@ -649,11 +669,9 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
         </ul> 
        </div> 
       </div> 
-      <div> 
-       <div> 
-        <img src="res/newbtimg.png" /> 
-       </div> 
-       <div> 
+      <div class="xinwenright"> 
+       <img class="xinwentitle" src="res/hangyexinwen.png" /> 
+       <div class="xinwenlist"> 
         <ul> 
          <li> <a onclick="ShowDiv3('MyDiv3','fade3','132','52')"> TMA移动营销大奖终审评选精彩落幕 </a></li> 
          <li> <a onclick="ShowDiv3('MyDiv3','fade3','131','52')"> Social CRM 2014-时趣社会化大数据营销战略 </a></li> 
@@ -666,11 +684,12 @@ if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SA
         </ul> 
        </div> 
       </div> 
+        <div style="clear: both"></div>
      </div> 
-     <div> 
+     <div class="topback"> 
       <a href="index.html"><img src="res/topback.png" /></a> 
      </div> 
-     <div> 
+     <div class="footer"> 
       <p> <a href="http://www.new-mix.com.cn/#新合概述/关于我们">关于我们</a><a href="http://www.new-mix.com.cn/#合作伙伴">合作伙伴</a><a href="http://www.new-mix.com.cn/#新合概述/联系我们">联系我们</a><a href="http://www.new-mix.com.cn/#新合概述/人才招聘">人才招聘</a></p> 
       <p>&copy;2015 New-Mix <a href="http://www.beianbeian.com/gaoji?field=mainLicense&amp;value=%E6%B2%AAICP%E5%A4%8715000020%E5%8F%B7" target="_blank">沪ICP备15000020号</a></p> 
      </div> 
